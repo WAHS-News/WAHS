@@ -25574,7 +25574,7 @@
 	                            null,
 	                            React.createElement(
 	                                'button',
-	                                { type: 'button', 'class': 'button' },
+	                                { type: 'button', 'class': 'button', value: 'search' },
 	                                'Search'
 	                            )
 	                        )
@@ -25656,7 +25656,7 @@
 /* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	/**
 	 * Created by Anurag Akkiraju on 8/28/16.
@@ -25664,16 +25664,34 @@
 	var React = __webpack_require__(8);
 
 	var Crew = React.createClass({
-	    displayName: 'Crew',
+	    displayName: "Crew",
 
 	    render: function render() {
 	        return React.createElement(
-	            'div',
-	            null,
+	            "div",
+	            { className: "media-object stack-for-small" },
 	            React.createElement(
-	                'h5',
-	                null,
-	                'Crew Component'
+	                "div",
+	                { className: "media-object-section" },
+	                React.createElement(
+	                    "div",
+	                    { className: "thumbnail" },
+	                    React.createElement("img", { src: "https://googledrive.com/host/0B4j84GV7_geaZEtfdFMyWjhPaHM/AnuragPic.jpg", height: "200", width: "200" })
+	                )
+	            ),
+	            React.createElement(
+	                "div",
+	                { className: "media-object-section" },
+	                React.createElement(
+	                    "h4",
+	                    null,
+	                    "Anurag Akkiraju."
+	                ),
+	                React.createElement(
+	                    "p",
+	                    null,
+	                    "Anurag Akkiraju is the creator of this website and he is the webmaster/dev for WAHS News. He is currently a junior and is the lead programmer for an FRC Robotics Team. He enjoys programming and working with his hands."
+	                )
 	            )
 	        );
 	    }
