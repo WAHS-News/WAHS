@@ -25627,7 +25627,7 @@
 /* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	/**
 	 * Created by Anurag Akkiraju on 8/28/16.
@@ -25635,16 +25635,38 @@
 	var React = __webpack_require__(8);
 
 	var About = React.createClass({
-	    displayName: 'About',
+	    displayName: "About",
 
 	    render: function render() {
 	        return React.createElement(
-	            'div',
+	            "div",
 	            null,
 	            React.createElement(
-	                'h5',
-	                null,
-	                'This Website was built by Anurag Akkiraju for WAHS NEWS from the ground up. It was written in the brand new Web Technologies of React.js, Babel, and SCSS/SASS w/ Foundation framework. The Content is hosted through Youtube. The Website itself was bought through GoDaddy and hosted through Heroku.'
+	                "div",
+	                { className: "media-object stack-for-small" },
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "thumbnail" },
+	                        React.createElement("img", { src: "https://googledrive.com/host/0B4j84GV7_geaZEtfdFMyWjhPaHM/wahs_logo.png", height: "400", width: "400" })
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "h4",
+	                        null,
+	                        "WAHS NEWS."
+	                    ),
+	                    React.createElement(
+	                        "h5",
+	                        null,
+	                        "This Website was built by Anurag Akkiraju for WAHS NEWS from the ground up. It was written in the brand new Web Technologies of React.js, Babel, and SCSS/SASS w/ Foundation framework. The Content is hosted through Youtube. The Website itself was bought through GoDaddy and hosted through Heroku."
+	                    )
+	                )
 	            )
 	        );
 	    }
