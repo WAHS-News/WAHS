@@ -10,7 +10,7 @@ var Crew = React.createClass({
             <div className="media-object stack-for-small">
                 <div className="media-object-section">
                     <div className="thumbnail">
-                        <img src='https://googledrive.com/host/0B4j84GV7_geaZEtfdFMyWjhPaHM/AnuragPic.jpg' height="200" width="200"></img>
+                        <img src="/assets/AnuragPic.jpg" className="anurag-image" height="200" width="200"></img>
                     </div>
                 </div>
                 <div className="media-object-section">

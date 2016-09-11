@@ -105,12 +105,13 @@
 	var hashHistory = _require.hashHistory;
 
 	var Main = __webpack_require__(229);
-	var Weather = __webpack_require__(231);
-	var About = __webpack_require__(232);
-	var Crew = __webpack_require__(233);
+	var VideoPage = __webpack_require__(231);
+	var About = __webpack_require__(236);
+	var Crew = __webpack_require__(237);
+	var ArticleList = __webpack_require__(238);
 
 	// load foundation
-	__webpack_require__(234);
+	__webpack_require__(240);
 
 	$(document).foundation();
 
@@ -122,7 +123,7 @@
 	        { path: '/', component: Main },
 	        React.createElement(Route, { path: 'about', component: About }),
 	        React.createElement(Route, { path: 'crew', component: Crew }),
-	        React.createElement(IndexRoute, { component: Weather })
+	        React.createElement(IndexRoute, { component: ArticleList })
 	    )
 	), document.getElementById('app'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
@@ -25479,17 +25480,14 @@
 	            'div',
 	            null,
 	            React.createElement(Nav, null),
-	            React.createElement(
-	                'h2',
-	                null,
-	                'Main Component'
-	            ),
 	            this.props.children
 	        );
 	    }
 	});
 
 	module.exports = Main;
+
+	/*<img src="/assets/banner_large2.jpg" className="wahs-banner-image" width="3000px" height="100px"></img>*/
 
 /***/ },
 /* 230 */
@@ -25514,68 +25512,432 @@
 	    render: function render() {
 	        return React.createElement(
 	            'div',
-	            { className: 'top-bar' },
+	            { 'class': 'top-bar-container', 'data-sticky-container': true },
 	            React.createElement(
 	                'div',
-	                { className: 'top-bar-left' },
+	                { 'class': 'sticky', 'data-sticky': true, 'data-options': 'anchor: page; marginTop: 0; stickyOn: small;' },
 	                React.createElement(
-	                    'ul',
-	                    { className: 'menu' },
+	                    'div',
+	                    { className: 'top-bar' },
 	                    React.createElement(
-	                        'li',
-	                        { className: 'menu-text' },
-	                        'WAHS News'
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
+	                        'div',
+	                        { className: 'top-bar-left' },
 	                        React.createElement(
-	                            IndexLink,
-	                            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                            'Videos'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            Link,
-	                            { to: 'about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                            'About'
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                            Link,
-	                            { to: 'crew', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                            'Crew'
-	                        )
-	                    )
-	                )
-	            ),
-	            React.createElement(
-	                'div',
-	                { className: 'top-bar-right' },
-	                React.createElement(
-	                    'form',
-	                    { onSubmit: this.handleSearch },
-	                    React.createElement(
-	                        'ul',
-	                        { className: 'menu' },
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement('input', { type: 'search', placeholder: 'Search' })
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            null,
+	                            'ul',
+	                            { className: 'menu' },
 	                            React.createElement(
-	                                'button',
-	                                { type: 'button', 'class': 'button', value: 'search' },
-	                                'Search'
+	                                'li',
+	                                { className: 'nav-logo-image' },
+	                                React.createElement(
+	                                    IndexLink,
+	                                    { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                                    React.createElement('img', { src: '/assets/wahs_logo.png', height: '40', width: '40' })
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    IndexLink,
+	                                    { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                                    'Videos'
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: 'about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                                    'About'
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: 'crew', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                                    'Crew'
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'div',
+	                                    null,
+	                                    ' '
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                { className: 'twitter' },
+	                                React.createElement(
+	                                    'a',
+	                                    { href: 'https://twitter.com/wahstv' },
+	                                    React.createElement('img', { src: '/assets/twitter_logo.jpg', alt: 'twitter_logo', height: '40', width: '40' })
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                { className: 'facebook' },
+	                                React.createElement(
+	                                    'a',
+	                                    { href: 'https://www.facebook.com/wahsnews' },
+	                                    React.createElement('img', { src: '/assets/facebook_logo.png', alt: 'facebook_logo', height: '40', width: '40' })
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                { className: 'instagram' },
+	                                React.createElement(
+	                                    'a',
+	                                    { href: 'https://www.instagram.com/wahs_news/' },
+	                                    React.createElement('img', { src: '/assets/instagram_logo.png', alt: 'instagram_logo', height: '40', width: '40' })
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    'a',
+	                                    { href: 'mailto:pl224931@ahschool.com' },
+	                                    React.createElement('img', { src: '/assets/gmail_logo.png', alt: 'gmail_logo', height: '40', width: '40' })
+	                                )
+	                            )
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'top-bar-right' },
+	                        React.createElement('ul', { className: 'social-media' }),
+	                        React.createElement(
+	                            'form',
+	                            { onSubmit: this.handleSearch },
+	                            React.createElement(
+	                                'ul',
+	                                { className: 'menu' },
+	                                React.createElement(
+	                                    'li',
+	                                    null,
+	                                    React.createElement('input', { type: 'search', placeholder: 'Search' })
+	                                ),
+	                                React.createElement(
+	                                    'li',
+	                                    null,
+	                                    React.createElement(
+	                                        'button',
+	                                        { type: 'button', 'class': 'button', value: 'search' },
+	                                        'Search'
+	                                    )
+	                                )
 	                            )
 	                        )
 	                    )
@@ -25603,28 +25965,205 @@
 	 */
 
 	var React = __webpack_require__(8);
+	var NewsModal = __webpack_require__(232);
 
-	var Weather = React.createClass({
-	    displayName: 'Weather',
+	var Node = __webpack_require__(234);
 
-
+	var VideoPage = React.createClass({
+	    displayName: 'VideoPage',
 	    render: function render() {
 	        return React.createElement(
 	            'div',
 	            null,
 	            React.createElement(
-	                'h5',
+	                'div',
 	                null,
-	                'Video Component'
+	                React.createElement(
+	                    'h3',
+	                    { className: 'text-center' },
+	                    ' The WAHS Newsfeed'
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                { 'class': 'flex-video1' },
+	                React.createElement('iframe', { width: '700', height: '700', src: 'https://www.youtube.com/embed/R4UvORkbQ0o', frameborder: '0', allowfullscreen: true })
+	            ),
+	            React.createElement(
+	                'button',
+	                { type: 'button', 'class': 'modalbutton' },
+	                React.createElement(NewsModal, { title: 'Crazy ax lunatic roams AHS', story: 'This is the secret story', source: 'https://www.youtube.com/embed/R4UvORkbQ0o' })
 	            )
 	        );
 	    }
 	});
 
-	module.exports = Weather;
+	module.exports = VideoPage;
+
+	/*
+	  TODO: if - else support for modals
+	 */
 
 /***/ },
 /* 232 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var React = __webpack_require__(8);
+	var ReactDOM = __webpack_require__(165);
+	var ReactDOMServer = __webpack_require__(233);
+
+	var NewsModal = React.createClass({
+	    displayName: 'NewsModal',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            title: 'News Story'
+	        };
+	    },
+	    propTypes: {
+	        title: React.PropTypes.string,
+	        story: React.PropTypes.string.isRequired,
+	        source: React.PropTypes.string.isRequired
+	    },
+	    componentDidMount: function componentDidMount() {
+	        var _props = this.props;
+	        var title = _props.title;
+	        var story = _props.story;
+	        var source = _props.source;
+
+	        var modalMarkup = React.createElement(
+	            'div',
+	            { id: 'news-modal', className: 'reveal tiny text-center', 'data-reveal': '' },
+	            React.createElement(
+	                'h4',
+	                null,
+	                title
+	            ),
+	            React.createElement(
+	                'div',
+	                { 'class': 'flex-video' },
+	                React.createElement('iframe', { width: '200', height: '200', src: source, frameborder: '0' })
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                story
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                React.createElement(
+	                    'button',
+	                    { className: 'button hollow', 'data-close': '' },
+	                    'Okay'
+	                )
+	            )
+	        );
+
+	        var $modal = $(ReactDOMServer.renderToString(modalMarkup));
+	        $(ReactDOM.findDOMNode(this)).html($modal);
+
+	        var modal = new Foundation.Reveal($('#news-modal'));
+	        modal.open();
+	    },
+	    render: function render() {
+	        return React.createElement('div', null);
+	    }
+	});
+
+	module.exports = NewsModal;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = __webpack_require__(155);
+
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(235);
+
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8)
+	    , version = +React.version.substring(0, React.version.lastIndexOf('.'))
+	    , types = ['bool', 'func', 'node'].map(name => React.PropTypes[name])
+	;
+
+	function _getResult(result) {
+	    if (/^(?:string|number|boolean)$/i.test(typeof result))
+	        return React.createElement('span', null, result);
+
+	    if (React.isValidElement(result))
+	        return result;
+
+	    if (typeof result === 'function') {
+	        if (result.displayName)
+	            return React.createElement(result);
+
+	        return _getResult(result());
+	    }
+	}
+
+	var If = React.createClass({
+	    displayName: 'If',
+	    propTypes: {
+	        if: React.PropTypes.bool,
+	        then: React.PropTypes.oneOfType(types),
+	        else: React.PropTypes.oneOfType(types)
+	    },
+	    render: function() {
+	        var props = this.props,
+	            total = React.Children.count(props.children),
+	            result = [];
+
+	        if ((props.if && !total && !props.then) || (!props.if && !total && !props.else))
+	            return null;
+
+	        if (total) {
+	            React.Children.forEach(props.children, child => {
+	                if (version <= 0.12 ? child.type === If.type : child.type === If) {
+	                    if (child.props && !('if' in child.props)) {
+	                        if (props.if && child.props.then) result.push(child.props.children);
+	                        if (!props.if && child.props.else) result.push(child.props.children);
+	                    } else {
+	                        result.push(child)
+	                    }
+	                } else {
+	                    if (props.if) result.push(child);
+	                }
+	            });
+	        } else {
+	            if ('if' in props) {
+	                if (props.if && props.then) result.push(props.then);
+	                if (!props.if && props.else) result.push(props.else);
+	            }
+	        }
+
+	        return !result.length ? null
+	            : result.length === 1 && !(result[0] instanceof Array) ? _getResult(result.shift())
+	            : React.createElement('div', null, result);
+	    }
+	});
+
+	module.exports = If;
+
+
+/***/ },
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25650,7 +26189,7 @@
 	                    React.createElement(
 	                        "div",
 	                        { className: "thumbnail" },
-	                        React.createElement("img", { src: "https://googledrive.com/host/0B4j84GV7_geaZEtfdFMyWjhPaHM/wahs_logo.png", height: "400", width: "400" })
+	                        React.createElement("img", { src: "/assets/wahs_logo.png", className: "wahs-logo-image", height: "400", width: "400" })
 	                    )
 	                ),
 	                React.createElement(
@@ -25664,7 +26203,7 @@
 	                    React.createElement(
 	                        "h5",
 	                        null,
-	                        "This Website was built by Anurag Akkiraju for WAHS NEWS from the ground up. It was written in the brand new Web Technologies of React.js, Babel, and SCSS/SASS w/ Foundation framework. The Content is hosted through Youtube. The Website itself was bought through GoDaddy and hosted through Heroku."
+	                        "This Website was built by Anurag Akkiraju for WAHS NEWS. It was written in the brand new Web Technologies of React.js, Babel, and SCSS/SASS w/ Foundation framework. The Content is hosted through Youtube. The Website itself was bought through GoDaddy and hosted through Heroku."
 	                    )
 	                )
 	            )
@@ -25675,7 +26214,7 @@
 	module.exports = About;
 
 /***/ },
-/* 233 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25698,7 +26237,7 @@
 	                React.createElement(
 	                    "div",
 	                    { className: "thumbnail" },
-	                    React.createElement("img", { src: "https://googledrive.com/host/0B4j84GV7_geaZEtfdFMyWjhPaHM/AnuragPic.jpg", height: "200", width: "200" })
+	                    React.createElement("img", { src: "/assets/AnuragPic.jpg", className: "anurag-image", height: "200", width: "200" })
 	                )
 	            ),
 	            React.createElement(
@@ -25722,16 +26261,137 @@
 	module.exports = Crew;
 
 /***/ },
-/* 234 */
+/* 238 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8);
+	var Article = __webpack_require__(239);
+
+	var articleList = [{ avatar: "https://placebear.com/100/100", title: "Nulla consequat massa quis enim", subtitle: "Donec pede justo, fringilla vel",
+	    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+	    firstImage: "http://placehold.it/250x150/f00",
+	    secondImage: "http://placehold.it/250x150/0f0",
+	    author: "Kentucky, USA" }, { avatar: "https://placebear.com/g/100/100", title: "Nullam accumsan lorem in dui", subtitle: "Tempus non, auctor et, hendrerit quis, nisi.",
+	    text: "Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
+	    firstImage: "http://placehold.it/250x150/ff0",
+	    secondImage: "http://placehold.it/250x150/f0f",
+	    author: "Florida, USA" }];
+
+	var ArticleList = React.createClass({
+	    displayName: 'ArticleList',
+
+	    render: function render() {
+	        var articles = articleList.map(function (article, i) {
+	            return React.createElement(
+	                'div',
+	                null,
+	                React.createElement(Article, { avatar: article.avatar, title: article.title,
+	                    subtitle: article.subtitle, text: article.text,
+	                    firstImage: article.firstImage, secondImage: article.secondImage,
+	                    author: article.author,
+	                    id: 'id_' + i }),
+	                React.createElement('hr', null)
+	            );
+	        });
+
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'h1',
+	                { className: 'text-center' },
+	                'WAHS Feed'
+	            ),
+	            React.createElement('hr', null),
+	            React.createElement(
+	                'ul',
+	                { className: 'article-list' },
+	                articles
+	            )
+	        );
+	    }
+	});
+
+	module.exports = ArticleList;
+
+/***/ },
+/* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	var Article = React.createClass({
+	    displayName: 'Article',
+
+	    render: function render() {
+	        var key = 'id_' + this.props.id;
+	        return React.createElement(
+	            'div',
+	            { className: 'row article' },
+	            React.createElement(
+	                'div',
+	                { className: 'left-col large-2 columns' },
+	                React.createElement(
+	                    'figure',
+	                    null,
+	                    React.createElement('img', { src: this.props.avatar, className: 'avatar-image',
+	                        alt: 'avatar_picture' })
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'right-col large-10 columns' },
+	                React.createElement(
+	                    'h1',
+	                    null,
+	                    this.props.title
+	                ),
+	                React.createElement(
+	                    'h2',
+	                    null,
+	                    this.props.subtitle
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    this.props.text
+	                ),
+	                React.createElement(
+	                    'div',
+	                    null,
+	                    React.createElement('img', { src: this.props.firstImage,
+	                        className: 'thumbnail', alt: 'thumbnail_image' }),
+	                    React.createElement('img', { src: this.props.secondImage,
+	                        className: 'thumbnail', alt: 'thumbnail_image' })
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    ' By: ',
+	                    this.props.author
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Article;
+
+/***/ },
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(235);
+	var content = __webpack_require__(241);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(237)(content, {});
+	var update = __webpack_require__(243)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -25748,10 +26408,10 @@
 	}
 
 /***/ },
-/* 235 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(236)();
+	exports = module.exports = __webpack_require__(242)();
 	// imports
 
 
@@ -25762,7 +26422,7 @@
 
 
 /***/ },
-/* 236 */
+/* 242 */
 /***/ function(module, exports) {
 
 	/*
@@ -25818,7 +26478,7 @@
 
 
 /***/ },
-/* 237 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

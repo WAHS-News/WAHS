@@ -11,10 +11,15 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.12.0",
+    "elemental": "^0.6.1",
     "express": "^4.13.4",
     "react": "^0.14.7",
+    "react-addons-css-transition-group": "^15.3.1",
+    "react-bootstrap": "^0.30.3",
     "react-dom": "^0.14.7",
-    "react-router": "^2.0.0"
+    "react-modal-dialog": "^3.0.2",
+    "react-router": "^2.0.0",
+    "react-skylight": "^0.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
@@ -27,6 +32,13 @@
     "jquery": "^2.2.1",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+    "simple-react-modal": "^0.5.1",
+    "elemental": "^0.6.1",
+    "react-modal-dialog": "^3.0.2",
+    "react-spinjs": "^3.0.0",
+    "react-if-comp": "^0.0.7",
+    "react-bootstrap": "^0.30.3",
+    "react-skylight": "^0.4.1"
   }
 }

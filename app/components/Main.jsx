@@ -10,7 +10,7 @@ var Main = React.createClass({
         return(
             <div>
                 <Nav />
-                <h2>Main Component</h2>
+
                 {this.props.children}
             </div>
         );
@@ -18,3 +18,5 @@ var Main = React.createClass({
 });
 
 module.exports = Main;
+
+/*<img src="/assets/banner_large2.jpg" className="wahs-banner-image" width="3000px" height="100px"></img>*/

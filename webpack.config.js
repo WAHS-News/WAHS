@@ -29,8 +29,10 @@ module.exports = {
       Nav: 'app/components/Nav.jsx',
       About: 'app/components/About.jsx',
       Crew: 'app/components/Crew.jsx',
-      Weather: 'app/components/Weather.jsx',
-
+      VideoPage: 'app/components/VideoPage.jsx',
+      NewsModal: 'app/components/NewsModal.jsx',
+      Article: 'app/components/Article.jsx',
+      ArticleList:'app/components/ArticleList.jsx'
 
     },
     extensions: ['', '.js', '.jsx']
@@ -43,9 +45,12 @@ module.exports = {
           presets: ['react', 'es2015']
         },
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-
-      }
+        exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|woff)$/,
+        loader: 'url-loader'
+      },
     ]
   }
 };
