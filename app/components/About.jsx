@@ -29,7 +29,7 @@ var About = React.createClass({
                     </li>
                     <br></br>
                     <li className="text-center page-title">
-                        <img src="/assets/jQuery_logo.png" alt="jQuery_logo" height="40" width="40" />
+                        <img src="/assets/jquery_logo.png" alt="jQuery_logo" height="40" width="40" />
                         &nbsp;
                         &nbsp;
                         <a href="https://jquery.com/">jQuery</a> - I used
