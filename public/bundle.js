@@ -25673,213 +25673,6 @@
 	                            ),
 	                            React.createElement(
 	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
 	                                { className: 'twitter' },
 	                                React.createElement(
 	                                    'a',
@@ -26191,8 +25984,9 @@
 	            React.createElement(
 	                "p",
 	                { className: "text-center page-title" },
-	                "This is a Web Application/Site built for WAHS News/American Heritage School. Built by Anurag Akkiraju."
+	                "This is a Web Application/Site built for WAHS News/American Heritage School. Built by Anurag Akkiraju(11th grade)."
 	            ),
+	            React.createElement("br", null),
 	            React.createElement("br", null),
 	            React.createElement(
 	                "p",
@@ -26214,6 +26008,7 @@
 	                    ),
 	                    " - This was the JavaScript framework used. Made by Facebook, it is one of the hottest new web technologies in existence."
 	                ),
+	                React.createElement("br", null),
 	                React.createElement(
 	                    "li",
 	                    { className: "text-center page-title" },
@@ -26226,6 +26021,7 @@
 	                    ),
 	                    " - I used jQuery to asynchronously load frameworks as well as for DOM changes."
 	                ),
+	                React.createElement("br", null),
 	                React.createElement(
 	                    "li",
 	                    { className: "text-center page-title" },
@@ -26237,6 +26033,51 @@
 	                        "Node"
 	                    ),
 	                    " - I used Node.js to deploy my website to external servers and to route between pages."
+	                ),
+	                React.createElement("br", null),
+	                React.createElement(
+	                    "li",
+	                    { className: "text-center page-title" },
+	                    React.createElement(
+	                        "a",
+	                        { href: "http://foundation.zurb.com/" },
+	                        React.createElement("img", { src: "/assets/foundation_logo.png", alt: "foundation_logo", height: "40", width: "40" })
+	                    ),
+	                    " ",
+	                    React.createElement("img", { src: "/assets/sass_logo.svg", alt: "sass_logo", height: "40", width: "40" }),
+	                    "   ",
+	                    React.createElement(
+	                        "a",
+	                        { href: "http://sass-lang.com/" },
+	                        "Sass w/ Foundation framework"
+	                    ),
+	                    " - I used SASS/SCSS w/ Foundation Framework to style my page."
+	                ),
+	                React.createElement("br", null),
+	                React.createElement(
+	                    "li",
+	                    { className: "text-center page-title" },
+	                    React.createElement("img", { src: "/assets/heroku_logo.png", alt: "heroku_logo", height: "40", width: "40" }),
+	                    "   ",
+	                    React.createElement(
+	                        "a",
+	                        { href: "https://www.heroku.com/" },
+	                        "Heroku"
+	                    ),
+	                    " - I used Heroku to host the website and deploy code to."
+	                ),
+	                React.createElement("br", null),
+	                React.createElement(
+	                    "li",
+	                    { className: "text-center page-title" },
+	                    React.createElement("img", { src: "/assets/github_logo.svg", alt: "github_logo", height: "40", width: "40" }),
+	                    "   ",
+	                    React.createElement(
+	                        "a",
+	                        { href: "https://github.com/MaskedBandit1/WAHS" },
+	                        "Github"
+	                    ),
+	                    " - I used Github for Version Control and Code Storage."
 	                )
 	            )
 	        );
