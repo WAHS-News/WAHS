@@ -6,6 +6,7 @@ var VideoPage = require('VideoPage');
 var About = require('About');
 var Crew = require('Crew');
 var ArticleList  = require("ArticleList");
+var Playground = require("Playground");
 
 // load foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -17,7 +18,9 @@ ReactDOM.render(
         <Route path="/" component={Main}>
             <Route path="about" component={About}/>
             <Route path="crew" component={Crew}/>
+            <Route path="playground" component={Playground}/>
             <IndexRoute component={ArticleList}/>
+
         </Route>
     </Router>,
     document.getElementById('app')

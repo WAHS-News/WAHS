@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "WAHS",
   "version": "1.0.0",
-  "description": "Simple react app",
+  "description": "WAHS APP, made with React, jQuery, node.js, and SCSS w/ Foundation Framework ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

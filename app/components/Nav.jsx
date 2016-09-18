@@ -12,12 +12,12 @@ var Nav = React.createClass({
                 <div class="sticky" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
                     <div className="top-bar">
                         <div className="top-bar-left">
-                            <ul className="menu">
-                                <li className="nav-logo-image">
+                            <ul className="menu" color="black">
+                                <li className="nav-logo-image" color="black">
                                     <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}><img src="/assets/wahs_logo.png" height="40" width="40"></img></IndexLink>
                                 </li>
                                 <li>
-                                    <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Videos</IndexLink>
+                                    <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Feed</IndexLink>
                                 </li>
                                 <li>
                                     <Link  to="about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
@@ -26,7 +26,7 @@ var Nav = React.createClass({
                                     <Link to="crew" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Crew</Link>
                                 </li>
                                 <li>
-                                    <div>&nbsp;</div>
+                                    <Link to="playground" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Playground</Link>
                                 </li>
                                 <li>
                                     <div>&nbsp;</div>
@@ -147,7 +147,7 @@ var Nav = React.createClass({
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:pl224931@ahschool.com">
+                                    <a href="mailto:morningshowahs@gmail.com">
                                         <img src="/assets/gmail_logo.png" alt="gmail_logo" height="40" width="40" />
                                     </a>
                                 </li>

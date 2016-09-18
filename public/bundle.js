@@ -109,9 +109,10 @@
 	var About = __webpack_require__(236);
 	var Crew = __webpack_require__(237);
 	var ArticleList = __webpack_require__(238);
+	var Playground = __webpack_require__(240);
 
 	// load foundation
-	__webpack_require__(240);
+	__webpack_require__(241);
 
 	$(document).foundation();
 
@@ -123,6 +124,7 @@
 	        { path: '/', component: Main },
 	        React.createElement(Route, { path: 'about', component: About }),
 	        React.createElement(Route, { path: 'crew', component: Crew }),
+	        React.createElement(Route, { path: 'playground', component: Playground }),
 	        React.createElement(IndexRoute, { component: ArticleList })
 	    )
 	), document.getElementById('app'));
@@ -25524,10 +25526,10 @@
 	                        { className: 'top-bar-left' },
 	                        React.createElement(
 	                            'ul',
-	                            { className: 'menu' },
+	                            { className: 'menu', color: 'black' },
 	                            React.createElement(
 	                                'li',
-	                                { className: 'nav-logo-image' },
+	                                { className: 'nav-logo-image', color: 'black' },
 	                                React.createElement(
 	                                    IndexLink,
 	                                    { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
@@ -25540,7 +25542,7 @@
 	                                React.createElement(
 	                                    IndexLink,
 	                                    { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                                    'Videos'
+	                                    'Feed'
 	                                )
 	                            ),
 	                            React.createElement(
@@ -25565,9 +25567,9 @@
 	                                'li',
 	                                null,
 	                                React.createElement(
-	                                    'div',
-	                                    null,
-	                                    ' '
+	                                    Link,
+	                                    { to: 'playground', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                                    'Playground'
 	                                )
 	                            ),
 	                            React.createElement(
@@ -25908,7 +25910,7 @@
 	                                null,
 	                                React.createElement(
 	                                    'a',
-	                                    { href: 'mailto:pl224931@ahschool.com' },
+	                                    { href: 'mailto:morningshowahs@gmail.com' },
 	                                    React.createElement('img', { src: '/assets/gmail_logo.png', alt: 'gmail_logo', height: '40', width: '40' })
 	                                )
 	                            )
@@ -26181,30 +26183,60 @@
 	            "div",
 	            null,
 	            React.createElement(
-	                "div",
-	                { className: "media-object stack-for-small" },
+	                "h1",
+	                { className: "text-center page-title" },
+	                "About"
+	            ),
+	            React.createElement("hr", null),
+	            React.createElement(
+	                "p",
+	                { className: "text-center page-title" },
+	                "This is a Web Application/Site built for WAHS News/American Heritage School. Built by Anurag Akkiraju."
+	            ),
+	            React.createElement("br", null),
+	            React.createElement(
+	                "p",
+	                { className: "text-center page-title" },
+	                "Here are some of the cutting edge tools and frameworks used in the development of this site:"
+	            ),
+	            React.createElement(
+	                "ul",
+	                { className: "text-center page-title" },
 	                React.createElement(
-	                    "div",
-	                    { className: "media-object-section" },
+	                    "li",
+	                    { className: "text-center page-title" },
+	                    React.createElement("img", { src: "/assets/react_logo.svg", alt: "react_logo", height: "40", width: "40" }),
+	                    "   ",
 	                    React.createElement(
-	                        "div",
-	                        { className: "thumbnail" },
-	                        React.createElement("img", { src: "/assets/wahs_logo.png", className: "wahs-logo-image", height: "400", width: "400" })
-	                    )
+	                        "a",
+	                        { href: "https://facebook.github.io/react" },
+	                        "React"
+	                    ),
+	                    " - This was the JavaScript framework used. Made by Facebook, it is one of the hottest new web technologies in existence."
 	                ),
 	                React.createElement(
-	                    "div",
-	                    { className: "media-object-section" },
+	                    "li",
+	                    { className: "text-center page-title" },
+	                    React.createElement("img", { src: "/assets/jQuery_logo.png", alt: "jQuery_logo", height: "40", width: "40" }),
+	                    "   ",
 	                    React.createElement(
-	                        "h4",
-	                        null,
-	                        "WAHS NEWS."
+	                        "a",
+	                        { href: "https://jquery.com/" },
+	                        "jQuery"
 	                    ),
+	                    " - I used jQuery to asynchronously load frameworks as well as for DOM changes."
+	                ),
+	                React.createElement(
+	                    "li",
+	                    { className: "text-center page-title" },
+	                    React.createElement("img", { src: "/assets/nodejs_logo.png", alt: "nodejs_logo", height: "40", width: "40" }),
+	                    "   ",
 	                    React.createElement(
-	                        "h5",
-	                        null,
-	                        "This Website was built by Anurag Akkiraju for WAHS NEWS. It was written in the brand new Web Technologies of React.js, Babel, and SCSS/SASS w/ Foundation framework. The Content is hosted through Youtube. The Website itself was bought through GoDaddy and hosted through Heroku."
-	                    )
+	                        "a",
+	                        { href: "https://nodejs.org/en/" },
+	                        "Node"
+	                    ),
+	                    " - I used Node.js to deploy my website to external servers and to route between pages."
 	                )
 	            )
 	        );
@@ -26230,28 +26262,128 @@
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: "media-object stack-for-small" },
+	            null,
 	            React.createElement(
 	                "div",
-	                { className: "media-object-section" },
+	                { className: "media-object stack-for-small" },
 	                React.createElement(
 	                    "div",
-	                    { className: "thumbnail" },
-	                    React.createElement("img", { src: "/assets/AnuragPic.jpg", className: "anurag-image", height: "200", width: "200" })
-	                )
-	            ),
-	            React.createElement(
-	                "div",
-	                { className: "media-object-section" },
-	                React.createElement(
-	                    "h4",
-	                    null,
-	                    "Anurag Akkiraju."
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "thumbnail" },
+	                        React.createElement("img", { src: "/assets/AnuragPic.jpg", className: "anurag-image", height: "200", width: "200" })
+	                    )
 	                ),
 	                React.createElement(
-	                    "p",
-	                    null,
-	                    "Anurag Akkiraju is the creator of this website and he is the webmaster/dev for WAHS News. He is currently a junior and is the lead programmer for an FRC Robotics Team. He enjoys programming and working with his hands."
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "h4",
+	                        null,
+	                        "Anurag Akkiraju."
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        "Anurag Akkiraju is the creator of this website and he is the webmaster/dev for WAHS News. He is currently a junior and is the lead programmer for an FRC Robotics Team. He enjoys programming and working with his hands."
+	                    )
+	                ),
+	                React.createElement("hr", null),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "thumbnail" },
+	                        React.createElement("img", { src: "/assets/AnuragPic.jpg", className: "anurag-image", height: "200", width: "200" })
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "h4",
+	                        null,
+	                        "Anurag Akkiraju."
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        "Anurag Akkiraju is the creator of this website and he is the webmaster/dev for WAHS News. He is currently a junior and is the lead programmer for an FRC Robotics Team. He enjoys programming and working with his hands."
+	                    )
+	                ),
+	                React.createElement("hr", null),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "thumbnail" },
+	                        React.createElement("img", { src: "/assets/AnuragPic.jpg", className: "anurag-image", height: "200", width: "200" })
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "h4",
+	                        null,
+	                        "Anurag Akkiraju."
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        "Anurag Akkiraju is the creator of this website and he is the webmaster/dev for WAHS News. He is currently a junior and is the lead programmer for an FRC Robotics Team. He enjoys programming and working with his hands."
+	                    )
+	                ),
+	                React.createElement("hr", null),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "thumbnail" },
+	                        React.createElement("img", { src: "/assets/AnuragPic.jpg", className: "anurag-image", height: "200", width: "200" })
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "h4",
+	                        null,
+	                        "Anurag Akkiraju."
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        "Anurag Akkiraju is the creator of this website and he is the webmaster/dev for WAHS News. He is currently a junior and is the lead programmer for an FRC Robotics Team. He enjoys programming and working with his hands."
+	                    )
+	                ),
+	                React.createElement("hr", null),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "thumbnail" },
+	                        React.createElement("img", { src: "/assets/AnuragPic.jpg", className: "anurag-image", height: "200", width: "200" })
+	                    )
+	                ),
+	                React.createElement(
+	                    "div",
+	                    { className: "media-object-section" },
+	                    React.createElement(
+	                        "h4",
+	                        null,
+	                        "Anurag Akkiraju."
+	                    ),
+	                    React.createElement(
+	                        "p",
+	                        null,
+	                        "Anurag Akkiraju is the creator of this website and he is the webmaster/dev for WAHS News. He is currently a junior and is the lead programmer for an FRC Robotics Team. He enjoys programming and working with his hands."
+	                    )
 	                )
 	            )
 	        );
@@ -26269,15 +26401,13 @@
 	var React = __webpack_require__(8);
 	var Article = __webpack_require__(239);
 
-	var articleList = [{ avatar: "https://placebear.com/100/100", title: "Nulla consequat massa quis enim", subtitle: "Donec pede justo, fringilla vel",
+	var articleList = [{ avatar: "https://placebear.com/100/100", title: "Nulla consequat massa quis enim", subtitle: "Donec pede justo, fringilla vel ",
 	    text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
-	    firstImage: "http://placehold.it/250x150/f00",
-	    secondImage: "http://placehold.it/250x150/0f0",
-	    author: "Kentucky, USA" }, { avatar: "https://placebear.com/g/100/100", title: "Nullam accumsan lorem in dui", subtitle: "Tempus non, auctor et, hendrerit quis, nisi.",
+	    video: "https://www.youtube.com/embed/R4UvORkbQ0o",
+	    author: "Anurag Akkiraju" }, { avatar: "https://placebear.com/g/100/100", title: "Nullam accumsan lorem in dui", subtitle: "Tempus non, auctor et, hendrerit quis, nisi. ",
 	    text: "Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.",
-	    firstImage: "http://placehold.it/250x150/ff0",
-	    secondImage: "http://placehold.it/250x150/f0f",
-	    author: "Florida, USA" }];
+	    video: "https://www.youtube.com/embed/R4UvORkbQ0o",
+	    author: "Anurag Akkiraju" }];
 
 	var ArticleList = React.createClass({
 	    displayName: 'ArticleList',
@@ -26289,7 +26419,7 @@
 	                null,
 	                React.createElement(Article, { avatar: article.avatar, title: article.title,
 	                    subtitle: article.subtitle, text: article.text,
-	                    firstImage: article.firstImage, secondImage: article.secondImage,
+	                    video: article.video,
 	                    author: article.author,
 	                    id: 'id_' + i }),
 	                React.createElement('hr', null)
@@ -26340,39 +26470,39 @@
 	                    null,
 	                    React.createElement('img', { src: this.props.avatar, className: 'avatar-image',
 	                        alt: 'avatar_picture' })
+	                ),
+	                React.createElement(
+	                    'h6',
+	                    null,
+	                    ' By: ',
+	                    this.props.author
 	                )
 	            ),
 	            React.createElement(
 	                'div',
 	                { className: 'right-col large-10 columns' },
 	                React.createElement(
-	                    'h1',
+	                    'h2',
 	                    null,
 	                    this.props.title
 	                ),
+	                React.createElement('hr', null),
 	                React.createElement(
-	                    'h2',
+	                    'div',
+	                    { className: 'center' },
+	                    React.createElement('iframe', { width: '800', height: '450', src: this.props.video, frameborder: '0' })
+	                ),
+	                React.createElement('hr', null),
+	                ' ',
+	                React.createElement(
+	                    'strong',
 	                    null,
 	                    this.props.subtitle
 	                ),
 	                React.createElement(
-	                    'p',
+	                    'span',
 	                    null,
 	                    this.props.text
-	                ),
-	                React.createElement(
-	                    'div',
-	                    null,
-	                    React.createElement('img', { src: this.props.firstImage,
-	                        className: 'thumbnail', alt: 'thumbnail_image' }),
-	                    React.createElement('img', { src: this.props.secondImage,
-	                        className: 'thumbnail', alt: 'thumbnail_image' })
-	                ),
-	                React.createElement(
-	                    'p',
-	                    null,
-	                    ' By: ',
-	                    this.props.author
 	                )
 	            )
 	        );
@@ -26385,13 +26515,42 @@
 /* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	/**
+	 * Created by Anurag Akkiraju on 8/28/16.
+	 */
+	var React = __webpack_require__(8);
+
+	var Playground = React.createClass({
+	    displayName: 'Playground',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'h1',
+	                null,
+	                'Hello'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Playground;
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(241);
+	var content = __webpack_require__(242);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(243)(content, {});
+	var update = __webpack_require__(244)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -26408,10 +26567,10 @@
 	}
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(242)();
+	exports = module.exports = __webpack_require__(243)();
 	// imports
 
 
@@ -26422,7 +26581,7 @@
 
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports) {
 
 	/*
@@ -26478,7 +26637,7 @@
 
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

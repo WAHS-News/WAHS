@@ -10,18 +10,18 @@ var Article = React.createClass({
                         <img src={ this.props.avatar } className="avatar-image"
                              alt="avatar_picture" />
                     </figure>
+                    <h6> By: { this.props.author}</h6>
                 </div>
                 <div className="right-col large-10 columns">
-                    <h1>{ this.props.title }</h1>
-                    <h2>{ this.props.subtitle }</h2>
-                    <p>{ this.props.text }</p>
-                    <div>
-                        <img src={ this.props.firstImage }
-                             className="thumbnail" alt="thumbnail_image" />
-                        <img src={ this.props.secondImage }
-                             className="thumbnail" alt="thumbnail_image" />
+                    <h2>{ this.props.title }</h2>
+                    <hr></hr>
+                    <div className="center">
+                        <iframe width="800" height="450" src={this.props.video} frameborder="0"></iframe>
                     </div>
-                    <p> By: { this.props.author}</p>
+                    <hr></hr>
+                    &nbsp;
+                    <strong>{ this.props.subtitle }</strong>
+                    <span>{ this.props.text }</span>
                 </div>
             </div>
         );

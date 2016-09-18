@@ -32,7 +32,8 @@ module.exports = {
       VideoPage: 'app/components/VideoPage.jsx',
       NewsModal: 'app/components/NewsModal.jsx',
       Article: 'app/components/Article.jsx',
-      ArticleList:'app/components/ArticleList.jsx'
+      ArticleList:'app/components/ArticleList.jsx',
+      Playground: 'app/components/Playground.jsx'
 
     },
     extensions: ['', '.js', '.jsx']
