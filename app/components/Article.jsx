@@ -16,7 +16,7 @@ var Article = React.createClass({
                     <h2>{ this.props.title }</h2>
                     <hr></hr>
                     <div className="center">
-                        <iframe width="800" height="450" src={this.props.video} frameborder="0"></iframe>
+                        <iframe width="800" height="450" src={this.props.video} frameborder="0" allowfullscreen></iframe>
                     </div>
                     <hr></hr>
                     &nbsp;
