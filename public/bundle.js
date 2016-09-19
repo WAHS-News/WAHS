@@ -26012,7 +26012,7 @@
 	                React.createElement(
 	                    "li",
 	                    { className: "text-center page-title" },
-	                    React.createElement("img", { src: "/assets/jQuery_logo.png", alt: "jQuery_logo", height: "40", width: "40" }),
+	                    React.createElement("img", { src: "/assets/jquery_logo.png", alt: "jQuery_logo", height: "40", width: "40" }),
 	                    "   ",
 	                    React.createElement(
 	                        "a",
