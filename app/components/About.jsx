@@ -10,7 +10,6 @@ var About = React.createClass({
             <div>
                 <h1 className="text-center page-title">About</h1>
                 <hr></hr>
-                <span>WAHS NEWS is one of the most successful high school news groups in the U.S, named best Daily Taped Morning Show in the Nation.</span>
                 <p className="text-center page-title">
                     This is a Web Application/Site built for WAHS News/American Heritage School. Built by Anurag Akkiraju(11th grade).
                 </p>
