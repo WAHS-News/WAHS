@@ -25984,14 +25984,23 @@
 	            React.createElement(
 	                "p",
 	                { className: "text-center page-title" },
-	                "This is a Web Application/Site built for WAHS News/American Heritage School. Built by Anurag Akkiraju(11th grade)."
+	                "This is a Web Application/Site built for WAHS News/American Heritage School. Built by Anurag Akkiraju (11th grade)."
+	            ),
+	            React.createElement(
+	                "p",
+	                { className: "text-center page-title" },
+	                React.createElement(
+	                    "a",
+	                    { href: "https://github.com/WAHS-News/WAHS" },
+	                    "Check out the git repo at https://github.com/WAHS-News/WAHS !"
+	                )
 	            ),
 	            React.createElement("br", null),
 	            React.createElement("br", null),
 	            React.createElement(
 	                "p",
 	                { className: "text-center page-title" },
-	                "Here are some of the cutting edge tools and frameworks used in the development of this site:"
+	                "Here are some of the cutting edge tools and frameworks we used in the development of this site:"
 	            ),
 	            React.createElement(
 	                "ul",
@@ -26019,7 +26028,7 @@
 	                        { href: "https://jquery.com/" },
 	                        "jQuery"
 	                    ),
-	                    " - I used jQuery to asynchronously load frameworks as well as for DOM changes."
+	                    " - We used jQuery to asynchronously load frameworks as well as for DOM changes."
 	                ),
 	                React.createElement("br", null),
 	                React.createElement(
@@ -26032,7 +26041,7 @@
 	                        { href: "https://nodejs.org/en/" },
 	                        "Node"
 	                    ),
-	                    " - I used Node.js to deploy my website to external servers and to route between pages."
+	                    " - We used Node.js to deploy my website to external servers and to route between pages."
 	                ),
 	                React.createElement("br", null),
 	                React.createElement(
@@ -26051,7 +26060,7 @@
 	                        { href: "http://sass-lang.com/" },
 	                        "Sass w/ Foundation framework"
 	                    ),
-	                    " - I used SASS/SCSS w/ Foundation Framework to style my page."
+	                    " - We used SASS/SCSS w/ Foundation Framework to style my page."
 	                ),
 	                React.createElement("br", null),
 	                React.createElement(
@@ -26064,7 +26073,7 @@
 	                        { href: "https://www.heroku.com/" },
 	                        "Heroku"
 	                    ),
-	                    " - I used Heroku to host the website and deploy code to."
+	                    " - We used Heroku to host the website and deploy code to."
 	                ),
 	                React.createElement("br", null),
 	                React.createElement(
@@ -26077,7 +26086,7 @@
 	                        { href: "https://github.com/MaskedBandit1/WAHS" },
 	                        "Github"
 	                    ),
-	                    " - I used Github for Version Control and Code Storage."
+	                    " - We used Github for Version Control and Code Storage."
 	                )
 	            )
 	        );
@@ -26389,7 +26398,7 @@
 /* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	/**
 	 * Created by Anurag Akkiraju on 8/28/16.
@@ -26397,17 +26406,13 @@
 	var React = __webpack_require__(8);
 
 	var Playground = React.createClass({
-	    displayName: 'Playground',
+	    displayName: "Playground",
 
 	    render: function render() {
 	        return React.createElement(
-	            'div',
+	            "div",
 	            null,
-	            React.createElement(
-	                'h1',
-	                null,
-	                'Hello'
-	            )
+	            React.createElement("textarea", { rows: "45", cols: "25", placeholder: "Have fun and type in whatever you want..." })
 	        );
 	    }
 	});

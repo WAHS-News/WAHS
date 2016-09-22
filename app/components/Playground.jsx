@@ -8,7 +8,7 @@ var Playground = React.createClass({
     render: function(){
         return(
             <div>
-                <h1>Hello</h1>
+                <textarea rows="45" cols="25" placeholder="Have fun and type in whatever you want..."></textarea>
             </div>
         );
     }
